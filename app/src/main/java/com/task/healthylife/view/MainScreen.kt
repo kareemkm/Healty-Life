@@ -41,11 +41,12 @@ import androidx.navigation.compose.rememberNavController
 import com.task.healthylife.R
 import com.task.healthylife.view.food.FoodScreen
 import com.task.healthylife.view.home.HomeScreen
-import com.task.healthylife.view.practice.PracticeScreen
 import com.task.healthylife.view.profile.ProfileScreen
+import com.task.healthylife.view.target.TargetScreen
 
 @Composable
 fun MainScreen(navController: NavController) {
+
 
     val scaffoldState = rememberScaffoldState()
 
@@ -68,7 +69,7 @@ fun MainScreen(navController: NavController) {
                 .fillMaxSize()
         ) {
             composable("home") { HomeScreen(navController = navController) }
-            composable("practice") { PracticeScreen(navController = navController) }
+            composable("target") { TargetScreen() }
             composable("food") { FoodScreen(navController = navController) }
             composable("profile") { ProfileScreen(navController = navController) }
         }
@@ -88,7 +89,7 @@ fun MainBottomNavigation(navController: NavController) {
             .height(70.dp)
             .clip(RoundedCornerShape(topStart = 30.dp, topEnd = 30.dp)),
         cutoutShape = MaterialTheme.shapes.small.copy(
-            CornerSize(50.dp,)
+            CornerSize(50.dp)
         )
     ) {
         BottomNavigation(
@@ -127,9 +128,9 @@ fun MainBottomNavigation(navController: NavController) {
             BottomNavigationItem(
                 icon = {
                     Icon(
-                        painter = painterResource(R.drawable.exersice),
+                        painter = painterResource(R.drawable.target),
                         contentDescription = "",
-                        tint = if (currentRout == "practice") Color(0xFFFFD188) else Color.White,
+                        tint = if (currentRout == "target") Color(0xFFFFD188) else Color.White,
                         modifier = Modifier
                             .size(40.dp)
                             .padding(top = 5.dp)
@@ -138,15 +139,15 @@ fun MainBottomNavigation(navController: NavController) {
                 },
                 label = {
                     Text(
-                        text = if (currentRout == "practice") "Practice" else "",
+                        text = if (currentRout == "target") "Target" else "",
                         color = Color(0xFFFFD188),
                         fontSize = 11.sp
                     )
                 },
-                selected = currentRout == "practice",
+                selected = currentRout == "target",
                 onClick = {
-                    if (currentRout != "practice") {
-                        navController.navigate("practice") {
+                    if (currentRout != "target") {
+                        navController.navigate("target") {
                             popUpTo(navController.graph.startDestinationId) { saveState = true }
                             launchSingleTop = true
                             restoreState = true

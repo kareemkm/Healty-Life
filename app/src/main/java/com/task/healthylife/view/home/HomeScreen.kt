@@ -131,9 +131,9 @@ fun HomeScreen(
             ) {
                 OverviewItems(
                     modifier = Modifier.weight(1f),
-                    icon = R.drawable.home,
-                    value = "3.950",
-                    type = "Cal Burent"
+                    icon = R.drawable.sleep,
+                    value = "8.30 h",
+                    type = "Sleep hours"
                 )
                 OverviewItems(
                     modifier = Modifier.weight(1f),

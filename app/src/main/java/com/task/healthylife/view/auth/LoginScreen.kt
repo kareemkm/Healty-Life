@@ -85,7 +85,7 @@ fun LoginScreen(navController: NavController, authViewModel: AuthViewModel = vie
                 text = "Healthy Life",
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
-                fontSize = 32.sp,
+                fontSize = 36.sp,
                 modifier = Modifier.padding(start = 50.dp)
             )
         }
@@ -133,7 +133,7 @@ fun LoginScreen(navController: NavController, authViewModel: AuthViewModel = vie
                 shape = RoundedCornerShape(10.dp),
                 placeholder = {
                     Text(
-                        text = "username",
+                        text = "Email",
                         fontSize = 16.sp
                     )
                 },
@@ -161,7 +161,7 @@ fun LoginScreen(navController: NavController, authViewModel: AuthViewModel = vie
                 isError = passwordError != null,
                 placeholder = {
                     Text(
-                        text = "password",
+                        text = "Password",
                         fontSize = 16.sp
                     )
                 },
@@ -294,7 +294,7 @@ fun LoginScreen(navController: NavController, authViewModel: AuthViewModel = vie
                     color = Color(0xFF757171)
                 )
                 Text(
-                    text = "  Signin",
+                    text = "  SignUp",
                     color = Color.Black,
                     fontSize = 14.sp,
                     modifier = Modifier.clickable {

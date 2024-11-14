@@ -26,7 +26,6 @@ import com.task.healthylife.view.food.InputAge
 import com.task.healthylife.view.food.InputHeightScreen
 import com.task.healthylife.view.food.InputWeightScreen
 import com.task.healthylife.view.food.MealDetailsScreen
-import com.task.healthylife.view.food.MealItem
 import com.task.healthylife.view.home.StepCountScreen
 import kotlinx.coroutines.delay
 
@@ -36,7 +35,7 @@ fun App() {
     val navController = rememberNavController()
 
     LaunchedEffect(key1 = 1) {
-        delay(2000)
+        delay(4000)
         isSplash = false
     }
 

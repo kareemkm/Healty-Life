@@ -72,11 +72,7 @@ fun MealDetailsScreen(
                         .clip(shape = CircleShape)
                         .border(width = 1.dp, color = Color(0xFFE3E5E5), shape = CircleShape)
                         .clickable {
-                            navController.navigate("dietPlan/WEIGHT_LOSS") {
-                                popUpTo("mealDetails/{image}/{meal.name}/{meal.items[0].food}/{meal.items[0].calories}/{meal.items[0].recipe}/{meal.items[0].quantity}") {
-                                    inclusive = true
-                                }
-                            }
+                            navController.popBackStack()
                         },
                     contentAlignment = Alignment.Center
 

@@ -84,7 +84,7 @@ fun SigninScreen(navController: NavController,authViewModel: AuthViewModel = vie
                 text = "Healthy Life",
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
-                fontSize = 32.sp,
+                fontSize = 36.sp,
                 modifier = Modifier.padding(start = 50.dp)
             )
         }
@@ -106,7 +106,7 @@ fun SigninScreen(navController: NavController,authViewModel: AuthViewModel = vie
                 verticalAlignment = Alignment.CenterVertically
             ) {
                Text(
-                   text = "Signin",
+                   text = "Sign Up",
                    color = Color.Black,
                    fontSize = 32.sp,
                    fontWeight = FontWeight.Bold,
@@ -156,7 +156,7 @@ fun SigninScreen(navController: NavController,authViewModel: AuthViewModel = vie
                 ),
                 placeholder = {
                     Text(
-                        text = "username",
+                        text = "Email",
                         fontSize = 16.sp
                     )
                 },
@@ -266,7 +266,7 @@ fun SigninScreen(navController: NavController,authViewModel: AuthViewModel = vie
                     .border(width = 1.dp, color = Color(0xFF3BA170), shape = RoundedCornerShape(10.dp)),
             ) {
                 Text(
-                    text = "Signin"
+                    text = "Sign Up"
                 )
             }
             Row(
@@ -282,7 +282,7 @@ fun SigninScreen(navController: NavController,authViewModel: AuthViewModel = vie
                     color = Color(0xFF757171)
                 )
                 Text(
-                    text = "or signin with",
+                    text = "or sign up with",
                     fontSize = 12.sp,
                     modifier = Modifier
                         .padding(horizontal = 5.dp)

@@ -3,7 +3,9 @@ package com.task.healthylife.view.auth
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,36 +22,27 @@ import com.task.healthylife.R
 
 @Composable
 fun OnboardingScreen1(){
-    Box(
+    Column (
         modifier = Modifier.fillMaxSize().background(Color.White)
     ){
         Image(
-            painter = painterResource(R.drawable.undraw_indoor_bike_pwa4_1),
+            painter = painterResource(R.drawable.undraw_cooking_p7m1),
             contentDescription = null,
             modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(start = 30.dp, top = 150.dp)
-        )
-
-        Image(
-            painter = painterResource(R.drawable.undraw_hamburger_re_7sfy_1),
-            contentDescription = null,
-            modifier = Modifier
-                .align(Alignment.TopEnd)
-                .padding(top = 50.dp, end = 30.dp)
+                .padding(top = 100.dp)
+                .fillMaxWidth()
+                .padding(horizontal = 60.dp)
         )
         Text(
-            text = "The app offers you a balanced diet plan and a personalized training program to support your health and fitness",
+            text = "The program allows you to design a personalized diet plan that helps you achieve your health goals easily and effectively!",
             fontSize = 18.sp,
             color = Color(0xFF3BA170),
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.W600,
             textAlign = TextAlign.Center,
-            fontStyle = FontStyle.Italic,
             lineHeight = 40.sp,
-
             modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .padding(bottom = 170.dp, start = 40.dp, end = 40.dp)
+                .padding(top = 100.dp)
+                .padding(horizontal = 40.dp)
         )
     }
 
